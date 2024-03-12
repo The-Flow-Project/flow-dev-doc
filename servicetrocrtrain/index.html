@@ -47,6 +47,24 @@
                 <li class="toctree-l1"><a class="reference internal" href="../howto/">How-To</a>
                 </li>
               </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Service TrOCR Train</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#preparation">Preparation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#specific-feature-description">Specific feature description</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../templates/">Templates</a>
                 </li>
@@ -67,7 +85,7 @@
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
       <li class="breadcrumb-item active">Service TrOCR Train</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/l0rn0r/flow-dev/edit/master/docs/servicetrocrtrain.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/The-Flow-Project/flow-dev-doc/edit/master/docs/servicetrocrtrain.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -78,24 +96,42 @@
                 <h1 id="service-trocr-train">Service TrOCR Train</h1>
 <p>March 2024, Jonas &amp; Dana</p>
 <h2 id="introduction">Introduction</h2>
-<p>Content:  short paragraph to introduce the vision/goal of the feature - from the user's perspective</p>
+<p>This includes the decisions that affect the <strong>"TrOCR Train"</strong> service.<br />
+The service will be reachable via API, gets the data from GitHub, preprocesses it, and trains a TrOCR model.<br />
+It's designed in a main class and a few util classes. The actual state contains decisions concerning the logical classes, not yet the API design/code.</p>
 <h3 id="requirements">Requirements</h3>
-<p>Content: What is necessary to use the feature? (e.g. specific hardware or software, license, browser version)</p>
+<ul>
+<li>Python &gt;= 3.10</li>
+<li>lxml</li>
+<li>transformers</li>
+<li>pillow</li>
+<li>nltk</li>
+<li>pandas</li>
+<li>GitHub access token</li>
+</ul>
 <h3 id="preparation">Preparation</h3>
-<p>Content: What has the user to do to get this new feature - e.g. add a special configuration setting, contact the vendor for beta-access</p>
+<p>You need to have a GitHub repository, which has been prepared by the Flow GitHub actions. Create a access token and use the repository URL to start the service.
+Since we're not yet running an API, this is atm only for runs locally with Python.</p>
 <h2 id="getting-started">Getting started</h2>
-<p>Content: shortest way to use the new feature - short, specific - e.g. in how-to format</p>
+<ul>
+<li>Clone the service GitHub repository</li>
+<li>Install the required Python packages (<code>pip install -r requirements.txt</code>)</li>
+<li>Start a new Jupyter notebook or some Python script.</li>
+<li>Import the main class <code>TrOCRtrain</code> and run it's steps till training.</li>
+<li>The new trained model should be on Huggingface.co</li>
+</ul>
 <h2 id="specific-feature-description">Specific feature description</h2>
-<p>Content: Specific description using how-to guide or explanation for each of the main features</p>
-<h2 id="customization">Customization</h2>
-<p>Content: How can the user adapt and customize the new feature?</p>
-<h2 id="manage-and-setup">Manage and setup</h2>
-<p>Content: What and how can the administrator or power user configure the product to use the new features in the best way for the organization?</p>
-<h2 id="reference-and-advanced-learning">Reference and advanced learning</h2>
-<p>Content: list of related documents the user can read to better understand and use the new feature, also already existing features and other product documentation types</p>
+<p>Since we don't want anyone to up-/download data additionally, everything runs through GitHub and the data processed by the Python service is not persisted.
+So the service fetches the Page XML data from the GitHub repository, gets the images for preprocessing through the Transkribus API, creates the lines in the cache, and uses this for training.<br />
+The training service persists the preprocessed data for some time and it can be downloaded, if needed. This will be an API endpoint to get the data.</p>
+<p><img alt="UML TrOCRtrain class" src="../img/trocr-train.png" /></p>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../howto/" class="btn btn-neutral float-left" title="How-To"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../templates/" class="btn btn-neutral float-right" title="Templates">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -117,10 +153,14 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/l0rn0r/flow-dev" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/The-Flow-Project/flow-dev-doc" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     
+      <span><a href="../howto/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../templates/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

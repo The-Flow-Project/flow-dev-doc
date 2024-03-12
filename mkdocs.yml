@@ -1,8 +1,9 @@
 site_name: Flow Project Dev Documentation
-repo_url: https://github.com/l0rn0r/flow-dev
+repo_url: https://github.com/The-Flow-Project/flow-dev-doc
 nav:
   - Home: index.md
   - How-To: howto.md
+  - Service TrOCR Train: servicetrocrtrain.md
   - Templates: templates.md
 
 theme: 

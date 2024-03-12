@@ -4,32 +4,37 @@ March 2024, Jonas & Dana
 
 ## Introduction
 
-Content:  short paragraph to introduce the vision/goal of the feature - from the user's perspective
+This includes the decisions that affect the **"TrOCR Train"** service.  
+The service will be reachable via API, gets the data from GitHub, preprocesses it, and trains a TrOCR model.  
+It's designed in a main class and a few util classes. The actual state contains decisions concerning the logical classes, not yet the API design/code.
 
 ### Requirements
 
-Content: What is necessary to use the feature? (e.g. specific hardware or software, license, browser version)
+- Python >= 3.10
+- lxml
+- transformers
+- pillow
+- nltk
+- pandas
+- GitHub access token
 
 ### Preparation
 
-Content: What has the user to do to get this new feature - e.g. add a special configuration setting, contact the vendor for beta-access
+You need to have a GitHub repository, which has been prepared by the Flow GitHub actions. Create a access token and use the repository URL to start the service.
+Since we're not yet running an API, this is atm only for runs locally with Python.
 
 ## Getting started
 
-Content: shortest way to use the new feature - short, specific - e.g. in how-to format
+- Clone the service GitHub repository
+- Install the required Python packages (`pip install -r requirements.txt`)
+- Start a new Jupyter notebook or some Python script.
+- Import the main class `TrOCRtrain` and run it's steps till training.
+- The new trained model should be on Huggingface.co
 
 ## Specific feature description
 
-Content: Specific description using how-to guide or explanation for each of the main features
+Since we don't want anyone to up-/download data additionally, everything runs through GitHub and the data processed by the Python service is not persisted.
+So the service fetches the Page XML data from the GitHub repository, gets the images for preprocessing through the Transkribus API, creates the lines in the cache, and uses this for training.  
+The training service persists the preprocessed data for some time and it can be downloaded, if needed. This will be an API endpoint to get the data.
 
-## Customization
-
-Content: How can the user adapt and customize the new feature?
-
-## Manage and setup
-
-Content: What and how can the administrator or power user configure the product to use the new features in the best way for the organization?
-
-## Reference and advanced learning
-
-Content: list of related documents the user can read to better understand and use the new feature, also already existing features and other product documentation types
+![UML TrOCRtrain class](img/trocr-train.png)

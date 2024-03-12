@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Templates - Flow Project Dev Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Templates";
+        var mkdocs_page_input_path = "templates.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Flow Project Dev Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../howto/">How-To</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Templates</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#bug-report">Bug Report</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#typical-elements-of-a-bug-report">Typical elements of a bug report</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#template-bug-report">Template Bug Report</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#decision">Decision</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#elements-of-an-decision-document">Elements of an Decision document</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#template-decision">Template Decision</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#operating-manual">Operating Manual</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#typical-sections-of-an-operating-manual">Typical sections of an Operating Manual</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#template-operating-manual">Template Operating Manual</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#glossary">Glossary</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#elements-of-a-glossary-entry">Elements of a glossary entry</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#template-glossary">Template Glossary</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#meeting">Meeting</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#elements-of-a-meeting-document">Elements of a Meeting document</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#template-meeting">Template Meeting</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#product-feature">Product Feature</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#elements-of-a-product-feature-document">Elements of a product feature document</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#overview-and-introduction">Overview and introduction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#explore-quick-start-getting-started">Explore / quick start / getting started</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#specific-feature-description">Specific feature description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#customization">Customization</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#manage-and-setup">Manage and setup</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#reference-and-advanced-learning">Reference and advanced learning</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#template-product-feature">Template Product Feature</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-notes">Release notes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#elements-of-a-release-note">Elements of a release note</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#template-release-notes">Template Release notes</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Flow Project Dev Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Templates</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/l0rn0r/flow-dev/edit/master/docs/templates.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="templates-description">Templates description</h1>
+<p>Here you can find the descriptions and the different templates.
+If you want to use a template, just copy the markdown-code and insert it at the right place.</p>
+<h2 id="bug-report">Bug Report</h2>
+<p>The bug report helps the developer that has found a specific problem or issue with the software, to solve or perform a workaround.</p>
+<h3 id="typical-elements-of-a-bug-report">Typical elements of a bug report</h3>
+<ul>
+<li>Description of the problem: describe the problem in detail; write the error message or error code.</li>
+<li>How to identify the problem / causes of the problem: write typical conditions or cases when the problem occurs or what causes the problem.</li>
+<li>Solution: describe the solution in detail. Use a step-by-step solution approach. If no direct solution exists, describe potential workarounds.</li>
+<li>Related documentation: link related documentation files or pages e.g. in the knowledge base , user manual, matching tutorials, product features or in the operation manual.</li>
+</ul>
+<h3 id="template-bug-report">Template Bug Report</h3>
+<pre><code class="language-markdown"># Bug Report
+
+Date, Time, Who
+
+## Description of the problem
+
+Content: describe the problem in detail; write the error message or error code.
+
+### Error messages
+
+### Error codes
+
+## How to identify the problem
+
+Content: describe how to identify the problem or causes of the problem; write typical conditions or cases when the problem occurs or what causes the problem.
+
+## Solution
+
+Content: describe the solution in detail. Use a step-by-step solution approach. If no direct solution exists, describe potential workarounds.
+
+### Step 1: xxx
+
+### Step 2: xxx
+
+## Related documentation
+
+Content: link related documentation files or pages e.g. in the knowledge base, user manual, matching tutorials, product features or in the operation manual.
+
+</code></pre>
+<h2 id="decision">Decision</h2>
+<p>Decision documents contain decision that have been made by the team or someone of the team.
+It helps to track and remember those decisions and the explanation, why it has been decided</p>
+<h3 id="elements-of-an-decision-document">Elements of an Decision document</h3>
+<ul>
+<li>Introduction: short and brief description</li>
+<li>Theoretical knowledge: provide background information and context</li>
+<li>Reason: Why has this decision been made?</li>
+<li>Examples: provide matching examples, so the reader better understands how to apply the concept in practice (optional)</li>
+<li>Further reading: link additional guides, explanation documents and resources in the product documentation, or external reference (optional)</li>
+</ul>
+<h3 id="template-decision">Template Decision</h3>
+<pre><code class="language-markdown"># Title of Decision
+
+Date, Time, Who
+
+## Introduction
+
+Content: short and brief description about what has been decided
+
+## Theoretical knowledge
+
+Content: background information (brief), in the language of the reader; use images and other rich media
+to explain concepts
+
+## Reason
+
+Content: describe, why this decision has been made.
+
+## Examples
+
+Content: well-researched, matching examples so the reader can better understand how to apply the concept in practice
+
+## Further reading
+
+Content: additional guides, explanation documents and resources (internal / external)
+
+</code></pre>
+<h2 id="operating-manual">Operating Manual</h2>
+<p>The operating manual contains all necessary information and tasks to operate and manage a service, part of the project or object. It is mostly relevant for the dev team to understand, install, integrate, manage and upgrade the product.</p>
+<h3 id="typical-sections-of-an-operating-manual">Typical sections of an Operating Manual</h3>
+<ul>
+<li>System overview: main software components, applications, interfaces, external dependencies, host names/IP addresses (if necessary), ports/protocol and firewall rules</li>
+<li>Installation and onboarding:</li>
+<li>Prerequisites (specific hardware/software/server configuration and requirements, licenses, …) and check lists</li>
+<li>Step by step instructions to install software or system, e.g. how to integrate the Single Sign-On between customer’s cloud provider or on-site Active Directory, and the products user authentication module to integrate the employees</li>
+<li>Testing and Validation: How to check and validate the proper functionality of the system</li>
+<li>Information to handle typical struggles and problems</li>
+</ul>
+<h3 id="template-operating-manual">Template Operating Manual</h3>
+<pre><code class="language-markdown">
+# Operating Manual
+
+Date, Time, Who
+
+## System Overview
+
+Content: main software components, applications, interfaces, external dependencies, host names/IP addresses (if necessary), ports/protocol and firewall rules
+
+## Installation and onboarding
+
+## Prerequisites
+
+Content: specific hardware/software/server configuration and requirements, licenses, ... and check lists
+
+## Installation process
+
+Content: step-by-step instructions to install software or system, e.g. how to integrate the Single Sign-On between customer’s cloud provider or on-site Active Directory, and the products user authentication module to integrate the employees
+
+## Testing and Validation
+
+How to check and validate the proper functionality of the system and which tests to run for validation.
+
+## Frequently asked questions
+
+Content: Information to handle typical struggles and problems
+
+</code></pre>
+<h2 id="glossary">Glossary</h2>
+<p>A glossary lists the specific terms and describes it in a user-friendly language. It can be used for complex,
+domain-specific products and software applications.</p>
+<h3 id="elements-of-a-glossary-entry">Elements of a glossary entry</h3>
+<ul>
+<li>Term: word or fragment</li>
+<li>Definition: short description of the meaning of the term; not longer than 2-3 sentences</li>
+<li>Alias: (optional) similar terms or synonyms</li>
+<li>Further reading: (optional) list of links to additional pages in the online documentation that are related to the term and e.g. explain the usage or a specific functionality in your software product</li>
+</ul>
+<h3 id="template-glossary">Template Glossary</h3>
+<pre><code class="language-markdown"># Glossary entry
+
+Date, Time, Who
+
+## Title: Term
+
+Content: word or fragment
+
+## Definition
+
+Content: short description of the meaning of the term; not longer than 2-3 sentences
+
+## Alias
+
+Content: similar terms or synonyms (optional)
+
+## Further reading
+
+Content: list of links to additional pages in the online documentation that are related to the term and e.g. explain
+    the usage or a specific functionality in your software product
+
+</code></pre>
+<h2 id="meeting">Meeting</h2>
+<p>Meeting documents contain the protocol of a dev-meeting or a full-team-meeting. It should describe what happened, shortly describe decisions and todo's and optionally link to decision documents.</p>
+<h3 id="elements-of-a-meeting-document">Elements of a Meeting document</h3>
+<ul>
+<li>Date, Time: When was the meeting</li>
+<li>Attendees: Who was there</li>
+<li>Open issues/subjects: List of issues/subjects to discuss</li>
+<li>Discussed subjects: List of subjects that have been discussed. One entry can contain a todo list where the todo's are assigned.</li>
+<li>Next meeting (optional)</li>
+</ul>
+<h3 id="template-meeting">Template Meeting</h3>
+<pre><code class="language-markdown"># Meeting protocol
+
+## Date, Time
+
+## Attendees
+
+## Open issues/subjects
+
+Content: List of issues/subjects to discuss
+
+## Discussed subjects
+
+Content: List of subjects that have been discussed. One entry can contain a todo list where the todo's are assigned.
+
+## Next meeting
+
+## Further reading
+
+Content: additional guides, explanation documents and resources (internal / external)
+
+</code></pre>
+<h2 id="product-feature">Product Feature</h2>
+<p>The product feature documentation present the main features and modules. It is a high level
+documentation introducing concepts.</p>
+<h3 id="elements-of-a-product-feature-document">Elements of a product feature document</h3>
+<h4 id="overview-and-introduction">Overview and introduction</h4>
+<ul>
+<li>What is xxx: short paragraph introducing the goal or vision of the feature</li>
+<li>System and configuration requirements: what is necessary to use the feature (e.g. specific hardware or software, license, browser version, …)</li>
+<li>Planning and preparation: is a specific checklist or similar preparation steps necessary? An installation guide might be helpful if there are changes necessary on the customers infrastructure or computer.</li>
+</ul>
+<h4 id="explore-quick-start-getting-started">Explore / quick start / getting started</h4>
+<ul>
+<li>Samples: prepared examples that indicate the usage, outcome and the gain for the user</li>
+<li>Create your first …: short but specific how-to guide or explanation how the user should use the new feature of the product to get the desired outcome</li>
+<li>Specific examples: if there are different ways or input to get different output, they might be described also in this section</li>
+</ul>
+<h4 id="specific-feature-description">Specific feature description</h4>
+<p>For each of the main features there should be a specific description using how-to guide or explanation</p>
+<h4 id="customization">Customization</h4>
+<p>Describes how the user can adapt and customize the new feature – using tutorials and how-to guides as</p>
+<h4 id="manage-and-setup">Manage and setup</h4>
+<p>Describes what and how the administrator and power users can configure the product to use the new features in the best way for the organization</p>
+<h4 id="reference-and-advanced-learning">Reference and advanced learning</h4>
+<p>List of references that the user can read to better understand and use the new feature, might also reference existing features and other product documentation types</p>
+<h3 id="template-product-feature">Template Product Feature</h3>
+<pre><code class="language-markdown"># Product Feature Title
+
+Date, Time, Who
+
+## Introduction
+
+Content:  short paragraph to introduce the vision/goal of the feature - from the user's perspective
+
+### Requirements
+
+Content: What is necessary to use the feature? (e.g. specific hardware or software, license, browser version)
+
+### Preparation
+
+Content: What has the user to do to get this new feature - e.g. add a special configuration setting, contact the vendor for beta-access
+
+## Getting started
+
+Content: shortest way to use the new feature - short, specific - e.g. in how-to format
+
+## Specific feature description
+
+Content: Specific description using how-to guide or explanation for each of the main features
+
+## Customization
+
+Content: How can the user adapt and customize the new feature?
+
+## Manage and setup
+
+Content: What and how can the administrator or power user configure the product to use the new features in the best way for the organization?
+
+## Reference and advanced learning
+
+Content: list of related documents the user can read to better understand and use the new feature, also already existing features and other product documentation types
+
+</code></pre>
+<h2 id="release-notes">Release notes</h2>
+<p>Release notes describe and list the changes of a software version and are normally published to the user and customer of a application or app.</p>
+<h3 id="elements-of-a-release-note">Elements of a release note</h3>
+<ul>
+<li>Software version (optional release &amp; build number), and/or the release date</li>
+<li>Added public features</li>
+<li>Fixed public bugs</li>
+<li>Known issues</li>
+</ul>
+<p>Additional information can be added if available or necessary, as e.g.</p>
+<ul>
+<li>Download link</li>
+<li>Supported platforms and environments</li>
+<li>Prerequisites</li>
+<li>Removed features</li>
+<li>Installation &amp; upgrade instructions</li>
+</ul>
+<h3 id="template-release-notes">Template Release notes</h3>
+<pre><code class="language-markdown"># Release Notes
+
+Date, Time, Who
+
+## Title: Product name + release version
+
+Content: Product name and official release version (optional release &amp; build number), and/or the release date
+
+## Added features
+
+Content: list of new (public visible) features, add links to product documentation (if described there)
+
+## Fixed bugs
+
+Content: list of (public visible/communicated) bugs, add ticket id / case number and related software module (e.g. iOS App, Server, ...)
+
+## Known issues
+
+Content: list of known issues and if possible, link to documentation that describes the problem and a potential workaround
+
+## Additional - use if appropriate
+
+Additional information can be added if available or necessary, as e.g.
+
+## Download link
+
+Content: links to the specific software downloads for each module + platform
+
+## Supported platforms and environments
+
+Content: if the product is available for different platforms and environments, list them along with the supported versions (e.g. Windows 10 x64, Windows 11 x64, ubuntu Server &gt; 20.04.3 LTS, ...)
+
+## Prerequisites
+
+Content: describe required prerequisites relevant for this release (e.g. specific Windows service pack, hardware, ...)
+
+## Removed features
+
+Content: if features have been removed (e.g. because it was only in beta, it was not used by the users, ...), list them here
+
+## Installation &amp; upgrade instructions
+
+Content: describe the installation and upgrade procedure, or link to the appropriate sections in the documentation (must be relevant for this specific version)
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../howto/" class="btn btn-neutral float-left" title="How-To"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/l0rn0r/flow-dev" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../howto/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

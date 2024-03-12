@@ -7,13 +7,6 @@ The documentation structure can be pushed to the GitHub repository and after clo
 
 Run `pip install mkdocs` in the terminal.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
 ## Project layout
 
 ```shell
@@ -25,7 +18,7 @@ docs/
 
 ## Creating new Docs
 
-To create a new doc, which can be found in the sidebar navigation, create a new **md-file** (like *newdoc.md*) in the `docs/`-folder.
+To create a new doc, which can be found in the sidebar navigation, create a new **md-file** (like *newdoc.md*) in the `docs/`-folder (use a template).
 Then open the `mkdocs.yml` file and add the new doc in the `nav`-section.
 
 ```yaml
@@ -34,9 +27,10 @@ nav:
     - New Doc:newdoc.md
 ```
 
-## Reading the documentation
+## Deploying it to GitHub pages
 
-After running `mkdocs serve` in the folder of the project documentation folder, go to <http://127.0.0.1:8000>.  
+Run `mkdocs gh-deploy --clean --message "github commit message" -f mkdocs.yml` locally in the terminal. The pages are deployed to the `gh-pages`-branch.  
+Go to <https://the-flow-project.github.io/flow-dev-doc/>  
 
 ## More
 
